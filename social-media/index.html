@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <title>social media demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link href="css/style.css" rel="stylesheet">-->
+        <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+        <style>
+            body {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                height: 100vh;
+            }
+
+            #root {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                padding: 5vh 0;
+                border-radius: 10px;
+                width: 500px;
+                background: gray;
+            }
+
+            .card {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                width: 400px;
+            }
+
+            .occupation {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                        justify-content: flex-start;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                /*font-weight: bold;*/
+                font-size: 20px;
+                height: 24px;
+                /*line-height: 1em;*/
+                margin: 0;
+                padding: 0;
+            }
+
+            .photo img {
+                border-radius: 20px;
+                padding-bottom: 10px;
+            }
+
+            .photo, .bio, .updates {
+                width: 400px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .name, .location {
+                margin: 0;
+            }
+
+            .updates ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                color: brown;
+            }
+
+            .update::before {
+                content: '@';
+                height: 1em;
+                width: 1em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="root">            
+        </div>
+        <script src="./build/index.js"></script>
+    </body>
+</html>
