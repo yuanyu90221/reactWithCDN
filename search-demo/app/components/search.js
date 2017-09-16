@@ -2,7 +2,7 @@ import React from 'react'
 
 export class Search extends React.Component {
     handleChange(e){
-        console.log("Query",e.target.value);
+        this.props.onQuery(e.target.value);
     }
     render(){
         return (
