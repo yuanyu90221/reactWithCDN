@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <title>Clock App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link href="css/style.css" rel="stylesheet">-->
+        <script crossorigin src="https://unpkg.com/react@15/dist/react.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>        
+        <script type="text/babel">
+            console.log(new Date().toLocaleTimeString());
+            function tick(){
+                const element = (
+                    <div>
+                        <h1>Hello World!</h1>
+                        <h2>It is {new Date().toLocaleTimeString()}</h2>
+                    </div>
+                );
+                ReactDOM.render(
+                    element,
+                    document.getElementById('root')
+                );
+            }
+            
+            tick();
+            setInterval(tick, 1000);
+        </script>
+    </body>
+</html>
