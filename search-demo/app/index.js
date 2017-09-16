@@ -7,17 +7,23 @@ import products from './products'
 class App extends React.Component {
     constructor(props){
         super(props);
-        console.log(products);
+        this.state = {
+            query: ''
+        };
+    }
+    handleQuery(query){
+        this.setState({query:query.toLowerCase().trim()});
     }
     render(){
+        let {query} = this.state;
         return (<div className="search">
-            <Search />
-            <Result results={products}/>
+            <Search onQuery={this.handleQuery.bind(this)}/>
+            <Result results={products} query={query}/>
         </div>)
     }
 }
 
 ReactDOM.render(
-    <App />,
+    <App results={products}/>,
     document.getElementById('app')
 );
